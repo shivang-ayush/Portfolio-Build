@@ -1,0 +1,3 @@
+[build]
+  command = "pnpm --filter @workspace/sita-ram-modi-portfolio run build"
+  publish = "artifacts/sita-ram-modi-portfolio/dist/public"
