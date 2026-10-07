@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Sita Ram Modi — Academic Portfolio"
+description = "A polished academic portfolio presenting the research, publications, experience, and experimental and computational expertise of Sita Ram Modi, Postdoctoral Research Associate at IIT Mandi."
+version = "1.0.0"
+id = "artifacts/sita-ram-modi-portfolio"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 18497
+
+[services.development]
+run = "pnpm --filter @workspace/sita-ram-modi-portfolio run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/sita-ram-modi-portfolio", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/sita-ram-modi-portfolio/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "18497"
+BASE_PATH = "/"

@@ -1,0 +1,1 @@
+- [Workspace dependency locks](workspace-dependency-locks.md) — regenerate the shared pnpm lockfile after changing a workspace package’s dependencies.
