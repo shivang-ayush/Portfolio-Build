@@ -25,6 +25,14 @@ npm run dev
 
 Vite is the only optional development dependency. It is not needed to open `index.html` directly.
 
+## Netlify deployment
+
+The repository-root `netlify.toml` builds this portfolio with
+`pnpm --filter @workspace/sita-ram-modi-portfolio run build` and publishes
+`artifacts/sita-ram-modi-portfolio/dist/public`, matching the output directory in
+`vite.config.ts`. The publish setting points to the directory containing the
+built `index.html`, not to the HTML file itself or the mockup sandbox output.
+
 ## Editing
 
 - Change text and section order in `index.html`.
